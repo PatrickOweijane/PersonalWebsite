@@ -1,4 +1,4 @@
-import Paddle from './Paddle.js'
+import Paddle from './paddle.js'
 
 
 export default class Visuals {
