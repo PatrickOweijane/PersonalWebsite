@@ -3,3 +3,5 @@ Scripts/
 Include/
 pyvenv.cfg
 secret_file.py
+*.pyc
+__pycache__/
