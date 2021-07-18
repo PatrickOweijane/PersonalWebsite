@@ -5,3 +5,4 @@ pyvenv.cfg
 secret_file.py
 *.pyc
 __pycache__/
+workspace.code-workspace

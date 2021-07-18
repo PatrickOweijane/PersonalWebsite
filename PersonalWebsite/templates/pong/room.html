@@ -10,6 +10,7 @@
 </head>
 <body>
     <canvas id='gameScreen'></canvas>
+    {{ room_name|json_script:"room-name" }}
     <script type='module' src='{% static "/PersonalWebsite/pong/src/index.js" %}'></script>
 </body>
 </html>

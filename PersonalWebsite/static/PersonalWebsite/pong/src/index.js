@@ -1,7 +1,9 @@
 import Visuals from './visuals.js';
+import PongSocket from './network.js';
 
 // Global scope
 const visuals = new Visuals();
+const pongSocket = new PongSocket();
 
 // Event listeners
 window.addEventListener('resize', function () {
@@ -18,6 +20,7 @@ function gameLoop() {
     };
     visuals.draw();
     visuals.update(newCoordinates);
+    pongSocket.send('right');
     // const imaginaryCoordinates = [0.5, 0.5];
     // const canvasCoordinates = Coordinates.toCanvasCoordinates(visuals.canvas, imaginaryCoordinates);
     // console.log(canvasCoordinates)

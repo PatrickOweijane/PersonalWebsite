@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'Portfolio.apps.PortfolioConfig',
     'Pong.apps.PongConfig',
 ]
@@ -74,6 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'PersonalWebsite.wsgi.application'
+ASGI_APPLICATION = 'PersonalWebsite.asgi.application'
 
 
 # Database
@@ -135,3 +137,9 @@ STATIC_ROOT = BASE_DIR / 'staticToServe'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
