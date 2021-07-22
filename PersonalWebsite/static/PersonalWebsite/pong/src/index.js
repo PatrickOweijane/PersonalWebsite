@@ -20,7 +20,11 @@ function gameLoop() {
     };
     visuals.draw();
     visuals.update(newCoordinates);
-    pongSocket.send('right');
+    try {
+        pongSocket.send('right');
+    } catch (error) {
+        console.log('not sent')
+    }
     // const imaginaryCoordinates = [0.5, 0.5];
     // const canvasCoordinates = Coordinates.toCanvasCoordinates(visuals.canvas, imaginaryCoordinates);
     // console.log(canvasCoordinates)

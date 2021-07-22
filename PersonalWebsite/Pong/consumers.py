@@ -27,6 +27,7 @@ class PongConsumer(AsyncWebsocketConsumer):
         await self.send(text_data=json.dumps({
             'init': init,
         }))
+        print('sent init msg')
 
     async def disconnect(self, close_code):
         await self.channel_layer.group_discard(
@@ -34,8 +35,10 @@ class PongConsumer(AsyncWebsocketConsumer):
             self.channel_name,
         )
 
-    async def receive(self, data):
-        data_json = json.loads(data)
+    async def receive(self, text_data):
+        print(f'received')
+        data_json = json.loads(text_data)
+        print(f'received {data_json=}')
         user_input = data_json['input']
         
         await self.channel_layer.group_send(

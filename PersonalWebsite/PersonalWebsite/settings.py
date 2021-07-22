@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'channels',
     'Portfolio.apps.PortfolioConfig',
     'Pong.apps.PongConfig',
+    'UrlShortener.apps.UrlshortenerConfig',
 ]
 
 MIDDLEWARE = [

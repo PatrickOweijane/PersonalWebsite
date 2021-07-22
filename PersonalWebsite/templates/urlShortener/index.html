@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortener</title>
+    <link rel="stylesheet" href="{% static '/PersonalWebsite/urlShortener/css/styles.css' %}">
+</head>
+    <body>
+        <div id="url-shortener-outmost-box">
+            <div id="url-shortener-outer-box" class="box outer-box">
+                <div id="url-shortener-top-box" class="box inner-box">
+                    <h1 id="url-shortener-header" class="deepest-element">URL Shortener</h1>
+                </div>
+                <div id="url-shortener-mid-box" class="box inner-box">
+                    <input id="url-shortener-input" type="text" class="deepest-element" placeholder="Enter URL">
+                </div>
+                <div id="url-shortener-bottom-box" class="box inner-box">
+                    <button id="url-shortener-button" class="deepest-element"><span>Shorten</span></button>
+                </div>
+            </div>
+            <div id="url-shortener-output-outer-box" class="box outer-box">
+                <div id="url-shortener-output-inner-box" class="box inner-box">
+                    <a id="output-link" href="https://www.google.com">google.com</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

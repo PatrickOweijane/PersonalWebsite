@@ -3,6 +3,7 @@ from pathlib import Path
 
 # Create your views here.
 def room(request, room_name):
+    print(request, room_name)
     return render(request, 'pong/room.html', {
         'room_name': room_name
     })
