@@ -19,7 +19,7 @@ from django.urls import re_path, path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Portfolio.urls')),
-    re_path('^(?i)urlshortener/', include('UrlShortener.urls')),
-    re_path('^(?i)pong/', include('Pong.urls')),
-    # path('pong/', include('Pong.urls')),
+    path('url-shortener/', include('UrlShortener.urls')),
+    path('r/', include('UrlShortener.urls')),
+    path('pong/', include('Pong.urls')),
 ]

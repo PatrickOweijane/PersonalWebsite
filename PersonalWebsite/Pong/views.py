@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from pathlib import Path
 
 # Create your views here.
 def room(request, room_name):
+    return redirect('lobby')
     print(request, room_name)
     return render(request, 'pong/room.html', {
         'room_name': room_name

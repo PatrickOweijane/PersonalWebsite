@@ -23,9 +23,17 @@
             </div>
             <div id="url-shortener-output-outer-box" class="box outer-box">
                 <div id="url-shortener-output-inner-box" class="box inner-box">
-                    <a id="output-link" href="https://www.google.com">google.com</a>
+                    <a id="url-shortener-output"></a>
                 </div>
             </div>
         </div>
+        <span id="uid" class="hidden">{{ uid }}</span>
+        <span id="root-url" class="hidden">{{ root_url }}</span>
+        <form method='POST' action='' class="hidden">
+            {% csrf_token %}
+            <input id="url-shortener-input-mirror" name='input-url' type="text">
+            <input id="url-shortener-button-mirror" type='submit' name='Create User'>
+        </form>
+        <script src="{% static '/PersonalWebsite/urlShortener/src/index.js' %}"></script>
     </body>
 </html>

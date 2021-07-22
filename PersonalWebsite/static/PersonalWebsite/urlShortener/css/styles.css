@@ -48,7 +48,7 @@
     background-color: transparent;
 }
 
-#output-link {
+#url-shortener-output {
     color: white;
     text-decoration: none;
 }
@@ -60,4 +60,8 @@ button {
 
 #url-shortener-input:focus {
     outline-width: 0;
+}
+
+.hidden {
+    display: none;
 }
