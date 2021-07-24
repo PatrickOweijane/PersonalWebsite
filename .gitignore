@@ -7,3 +7,5 @@ secret_file.py
 __pycache__/
 workspace.code-workspace
 *.sqlite3
+share/
+node_modules/
