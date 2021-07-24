@@ -6,3 +6,4 @@ secret_file.py
 *.pyc
 __pycache__/
 workspace.code-workspace
+*.sqlite3
