@@ -9,11 +9,14 @@
 }
 
 #url-shortener-outmost-box {
+    height: 25%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to top, #ff0000 0%, #670808 100%);
+    min-height: 140px;
 }
 
 .outer-box {
@@ -25,17 +28,24 @@
 }
 
 #url-shortener-output-outer-box {
+    height: 25%;
+    width: 100%;
+}
+
+#url-shortener-outer-box {
+    height: 75%;
     width: 100%;
 }
 
 .inner-box {
     text-align: center;
     width: 100%;
-    height: 50px;
+    height: 33%;
 }
 
 #url-shortener-output-inner-box {
     background-image: linear-gradient(to top, #ff0000 0%, #670808 100%);
+    height: 100%;
 }
 
 .deepest-element {
@@ -60,6 +70,22 @@ button {
 
 #url-shortener-input:focus {
     outline-width: 0;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 75%;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+}
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
 }
 
 .hidden {
