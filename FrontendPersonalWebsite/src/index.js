@@ -1,3 +1,5 @@
+import * as graphics from './3dGraphics.js';
+
 const inputUrl = document.getElementById('url-shortener-input');
 const inputUrlMirror = document.getElementById('url-shortener-input-mirror');
 
