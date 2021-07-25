@@ -30,6 +30,7 @@
 #url-shortener-output-outer-box {
     height: 25%;
     width: 100%;
+    flex-direction: row;
 }
 
 #url-shortener-outer-box {
@@ -46,7 +47,7 @@
 #url-shortener-output-inner-box {
     background-image: linear-gradient(to top, #ff0000 0%, #670808 100%);
     height: 100%;
-    position: relative;
+    width: 100%;
 }
 
 .deepest-element {
@@ -62,11 +63,6 @@
 #url-shortener-output {
     color: white;
     text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 
 button {
@@ -92,4 +88,26 @@ body {
 
 .hidden {
     display: none;
+}
+
+#clipboard-container {
+    height:100%;
+    width: 10%;
+}
+
+.bi {
+    width:80%;
+    height:80%;
+}
+
+.parent-to-center {
+    position: relative;
+}
+
+.child-to-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

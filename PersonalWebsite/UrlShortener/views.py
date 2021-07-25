@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Url
+from django.http import HttpResponse
 
 import uuid
 import re
+import json
 
 
 ROOT_URL = 'r/'
@@ -11,8 +13,12 @@ ROOT_URL = 'r/'
 def index(request, root_url=ROOT_URL):
     if request.method == 'GET':
         return render(request, 'urlShortener/index.html')
-    elif request.method == 'POST':
-        input_url = request.POST.get('input-url')
+
+def create(request, root_url=ROOT_URL):
+    print('#'*100)
+    if request.method == 'POST':
+        print(request.POST)
+        input_url = request.POST.get('inputUrl')
         print(input_url)
 
         uid = str(uuid.uuid4())[:5]
@@ -23,7 +29,7 @@ def index(request, root_url=ROOT_URL):
             'uid': uid,
             'root_url': root_url,
         }
-        return render(request, 'urlShortener/index.html', context)
+        return HttpResponse(json.dumps(context))
 
 
 def go(request, uid):
